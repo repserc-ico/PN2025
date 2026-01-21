@@ -2,11 +2,19 @@
 
 for num in {1..20}
 do
-	if (( $num % 3 == 0 ))
+	if (( $num % 3 == 0)) && (( $num % 5 == 0))
 	then
-		echo "ほげー"
+		echo "にゃ〜ん"
 	else
-		echo $num
+		if (( $num % 3 == 0 ))
+		then
+			echo "ほげー"
+		elif (( $num % 5 == 0 ))
+		then
+			echo "ふがー"
+		else
+			echo $num
+		fi
 	fi
 done
 
